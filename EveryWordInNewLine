@@ -1,0 +1,17 @@
+int main() {
+    char sentence[1000];
+
+    // Read the sentence from input
+    fgets(sentence, sizeof(sentence), stdin);
+
+    // Traverse the sentence and print each word on a new line
+    for (int i = 0; sentence[i] != '\0'; i++) {
+        if (sentence[i] == ' ') {
+            printf("\n");  // Print a newline when a space is found
+        } else {
+            printf("%c", sentence[i]);  // Print the current character
+        }
+    }
+
+    return 0;
+}
